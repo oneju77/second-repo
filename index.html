@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allie's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            scroll-snap-align: start;
+            padding: 20px;
+        }
+
+        #home { background-color: #FFDDC1; }
+        #about { background-color: #FFABAB; }
+        #contact { background-color: #85E3FF; }
+
+        .home-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            width: 90%;
+            text-align: left;
+        }
+
+        .home-text { flex: 1; }
+        
+        .home-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end; /* 把圖片推到最右邊 */
+        }
+
+        .home-image img {
+            width: 50vw; /* 讓圖片佔畫面一半的寬度 */
+            height: auto;
+            max-width: 400px; /* 設定圖片最大寬度，避免太大 */
+            border-radius: 12px;
+        }
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 讓標題置頂 */
+            align-items: center;
+            text-align: center;
+            padding-top: 50px; /* 增加上方間距 */
+        }
+
+        #about h2 {
+            margin-bottom: 20px; /* 增加標題下方間距 */
+        }
+
+
+        h1, h2 { color: #333; }
+        a { text-decoration: none; color: #333; font-weight: bold; }
+        a:hover { color: #555; }
+    </style>
+</head>
+<body>
+    <section id="home" class="section">
+        <div class="home-container">
+            <div class="home-text">
+                <h1>凃宛汝 Allie</h1>
+                <p>一個天馬行空、喜好多元的大四學生</p>
+                <p>📧 <a href="mailto:allie@gmail.com">allie@gmail.com</a></p>
+            </div>
+            <div class="home-image">
+                <img src="cat.png" alt="Cat's Photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>🎓 就讀於中原大學電機系大四</p>
+        <p>🛠️ Skills: Python, C</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>📧 <a href="mailto:allie@gamil.com">allie@gamil.com</a></p>
+        <p>🔗 <a href="https://linkedin.com/in/allie">LinkedIn</a> | <a href="https://github.com/oneju77">GitHub</a></p>
+    </section>
+</body>
+</html>
