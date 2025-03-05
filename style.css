@@ -1,0 +1,103 @@
+/* 基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 整個頁面背景 */
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a192f; /* 深藍色背景 */
+}
+
+/* 個人簡介卡片 */
+.profile-card {
+    background: rgba(255, 255, 255, 0.85); /* 白色但透明一點 */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;  /* 站畫面 80% */
+    max-width: 600px; /* 最大寬度限制 */
+    border: 2px solid #ddd;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+/* 個人照片 */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 懸停時圖片放大 */
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* 姓名 */
+.profile-name {
+    font-size: 2em;
+    color: #333;
+}
+
+/* 簡介文字 */
+.profile-desc {
+    font-size: 1.1em;
+    color: #444;
+    margin: 15px 0;
+}
+
+/* 按鈕 */
+button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* 增加與上方內容的距離 */
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #005599;
+}
+
+/* 更多資訊 (預設隱藏) */
+.hidden {
+    display: none;
+}
+
+/* "About Me" 和 "Contact Me" 的標題樣式 */
+h2 {
+    margin-top: 30px; /* 增加與上方 Show More 按鈕的距離 */
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* 文字樣式 */
+.profile-contact, .more-info p {
+    font-size: 1.1em;
+    color: #444;
+    margin-top: 15px; /* 增加段落間距 */
+}
+
+/* 進場動畫 */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
